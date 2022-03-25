@@ -20,11 +20,16 @@ namespace Deliverable2
             var input1 = Console.ReadLine();
             if (int.TryParse(input1, out int party)) {
                 if (party <= max && party > 0) {
+                    int patron = (party - party) + 1;
                     Console.WriteLine();
                     Console.WriteLine("A table for " + party + "!");
                     Console.WriteLine("Let's get everyone started with some drinks. We've got " + drink1 + " or " + drink2 + ".");
                     Console.WriteLine();
-                    Console.WriteLine("Alright, person number 1, " + drink1 + " or " + drink2 + "?");
+                    while (party <= max && party > 0 && patron <= party)
+                    {
+                        Console.WriteLine("Alright, person number " + patron++ + ", OK!!!!!!!!!!!");
+                    }
+                    /* Console.WriteLine("Alright, person number " + party + ", " + drink1 + " or " + drink2 + "?"); */
                     /* try to condense so it automates each person # rather than typing all of them out */
                     string drinkChoice = Console.ReadLine();
                     if (drinkChoice == drink1 || drinkChoice == drink2)
@@ -67,5 +72,3 @@ namespace Deliverable2
         
     }
 }
-
-/* Github setup test */

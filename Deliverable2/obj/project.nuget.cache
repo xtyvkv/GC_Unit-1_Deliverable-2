@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ISeSbFfUR+C3iBNXX2PdmqSBDfakHrwOPL52lRTEE+9Tb9yat4V5fCZpLG+CfcpDvY7SL0qn5MlKPWbswEqAJw==",
+  "dgSpecHash": "qGRZ5OX/RQHn/W7GAcDPsq+heZyo7dLGPRhTZA/1TB8NvKvQuScs5ouuXqAYQyOy0tWJgaAsU24eA8zg6Hwyxw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\15862\\source\\repos\\Deliverable2\\Deliverable2\\Deliverable2.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Christ\\Documents\\GC\\repos\\GC_Unit-1_Deliverable-2\\Deliverable2\\Deliverable2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Christ\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512",
+    "C:\\Users\\Christ\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Christ\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Christ\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

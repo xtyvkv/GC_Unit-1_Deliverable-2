@@ -1,0 +1,13 @@
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\bin\Debug\netcoreapp3.1\Deliverable2.exe
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\bin\Debug\netcoreapp3.1\Deliverable2.deps.json
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\bin\Debug\netcoreapp3.1\Deliverable2.runtimeconfig.json
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\bin\Debug\netcoreapp3.1\Deliverable2.runtimeconfig.dev.json
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\bin\Debug\netcoreapp3.1\Deliverable2.dll
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\bin\Debug\netcoreapp3.1\Deliverable2.pdb
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\obj\Debug\netcoreapp3.1\Deliverable2.csprojAssemblyReference.cache
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\obj\Debug\netcoreapp3.1\Deliverable2.AssemblyInfoInputs.cache
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\obj\Debug\netcoreapp3.1\Deliverable2.AssemblyInfo.cs
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\obj\Debug\netcoreapp3.1\Deliverable2.csproj.CoreCompileInputs.cache
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\obj\Debug\netcoreapp3.1\Deliverable2.dll
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\obj\Debug\netcoreapp3.1\Deliverable2.pdb
+C:\Users\Christ\Documents\GC\repos\GC_Unit-1_Deliverable-2\Deliverable2\obj\Debug\netcoreapp3.1\Deliverable2.genruntimeconfig.cache

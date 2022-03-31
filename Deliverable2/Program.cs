@@ -27,20 +27,36 @@ namespace Deliverable2
                     Console.WriteLine();
                     while (party <= max && party > 0 && patron <= party)
                     {
-                        Console.WriteLine("Alright, person number " + patron++ + ", OK!!!!!!!!!!!");
+                        Console.WriteLine("Alright, person number " + patron++ + ", " + drink1 + " or " + drink2 + "?");
+                        var drinkChoice = Console.ReadLine().ToLower();
+                        if (drinkChoice == drink1)
+                        {
+                            if (drinkChoice.Length == 0)
+                                System.Console.WriteLine("Empty String");
+                            /* figure out where to take that "empty string" business */
+                            /* do i need the else if AND else below? */
+                            else if (drinkChoice.Length == 1)
+                                System.Console.WriteLine(char.ToUpper(drinkChoice[0]) + ", good choice!");
+                            else
+                                System.Console.WriteLine(char.ToUpper(drinkChoice[0]) + drinkChoice.Substring(1) + ", good choice!");
+                            Console.WriteLine();
+                        }
+                        else if (drinkChoice == drink2)
+                        {
+                            if (drinkChoice.Length == 0)
+                                System.Console.WriteLine("Empty String");
+                            else if (drinkChoice.Length == 1)
+                                System.Console.WriteLine(char.ToUpper(drinkChoice[0]) + ", okay!");
+                            else
+                                System.Console.WriteLine(char.ToUpper(drinkChoice[0]) + drinkChoice.Substring(1) + ", okay!");
+                            Console.WriteLine();
+                        }
+                        else
+                        {
+                            Console.WriteLine("We don't have that. No drink for you!");
+                        }
                     }
-                    /* Console.WriteLine("Alright, person number " + party + ", " + drink1 + " or " + drink2 + "?"); */
-                    /* try to condense so it automates each person # rather than typing all of them out */
-                    string drinkChoice = Console.ReadLine();
-                    if (drinkChoice == drink1 || drinkChoice == drink2)
-                    {
-                        Console.WriteLine(drinkChoice + ", good choice!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("We don't have that. No drink for you!");
-                    }
-                    /* You need to store every patron's answer. Get to that later. */
+                    /* Figure out how to store all possible responses in order to calculate bill. */
                     double totalFood = party * rate;
                     double totalPrice = totalFood + 2;
                     Console.WriteLine();
@@ -72,5 +88,3 @@ namespace Deliverable2
         
     }
 }
-
-/* Changing from laptop to PC test */

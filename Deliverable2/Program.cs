@@ -10,6 +10,7 @@ namespace Deliverable2
             int max = 6;
             string drink1 = ("water");
             string drink2 = ("coffee");
+            /* declare the drink choice variables here?? */
 
             Console.WriteLine("Hi. Welcome to our Buffet.");
             Console.WriteLine("All you can eat for $" + rate + "!");
@@ -17,7 +18,7 @@ namespace Deliverable2
             Console.WriteLine();
             Console.WriteLine("How many people are in your group? Please, parties of " + max + " or lower.");
 
-            var input1 = Console.ReadLine();
+            string input1 = Console.ReadLine();
             if (int.TryParse(input1, out int party)) {
                 if (party <= max && party > 0) {
                     int patron = (party - party) + 1;
@@ -25,42 +26,54 @@ namespace Deliverable2
                     Console.WriteLine("A table for " + party + "!");
                     Console.WriteLine("Let's get everyone started with some drinks. We've got " + drink1 + " or " + drink2 + ".");
                     Console.WriteLine();
-                    while (party <= max && party > 0 && patron <= party)
+                    do
                     {
                         Console.WriteLine("Alright, person number " + patron++ + ", " + drink1 + " or " + drink2 + "?");
-                        var drinkChoice = Console.ReadLine().ToLower();
+                        string drinkChoice = Console.ReadLine().ToLower();
                         if (drinkChoice == drink1)
                         {
                             if (drinkChoice.Length == 0)
-                                System.Console.WriteLine("Empty String");
+                                Console.WriteLine("Empty String");
                             /* figure out where to take that "empty string" business */
                             /* do i need the else if AND else below? */
-                            else if (drinkChoice.Length == 1)
-                                System.Console.WriteLine(char.ToUpper(drinkChoice[0]) + ", good choice!");
+                            /* what if they don't want drinks? - low priority */
                             else
-                                System.Console.WriteLine(char.ToUpper(drinkChoice[0]) + drinkChoice.Substring(1) + ", good choice!");
+                                Console.WriteLine(char.ToUpper(drinkChoice[0]) + drinkChoice.Substring(1) + ", good choice!");
+                            int drinkNumber;
+                            Int32.TryParse(drinkChoice, out drinkNumber);
+                            Console.WriteLine((drinkNumber + 1) + "!");
                             Console.WriteLine();
                         }
                         else if (drinkChoice == drink2)
                         {
                             if (drinkChoice.Length == 0)
-                                System.Console.WriteLine("Empty String");
-                            else if (drinkChoice.Length == 1)
-                                System.Console.WriteLine(char.ToUpper(drinkChoice[0]) + ", okay!");
+                                Console.WriteLine("Empty String");
                             else
-                                System.Console.WriteLine(char.ToUpper(drinkChoice[0]) + drinkChoice.Substring(1) + ", okay!");
+                                Console.WriteLine(char.ToUpper(drinkChoice[0]) + drinkChoice.Substring(1) + ", okay!");
                             Console.WriteLine();
                         }
                         else
                         {
                             Console.WriteLine("We don't have that. No drink for you!");
+                            Console.WriteLine();
                         }
-                    }
+                        /* for (int drinkNumber = 0; drinkNumber++)
+                        {
+                            Console.WriteLine(drinkNumber + "waters.");
+                        } 
+                        */
+                    } while (party <= max && party > 0 && patron <= party);
+                    /* TEST */
+                    Console.WriteLine("Okay, so that's " + "__" + drink2 + "s and " + "__" + drink1 + "s.");
+                    /* make singular or plural depending on # */
+                    Console.WriteLine("I'll be right back. Feel free to grab your food!");
+                    /* END TEST */
                     /* Figure out how to store all possible responses in order to calculate bill. */
+                    /* Assign prices to the 2 drinks */
                     double totalFood = party * rate;
                     double totalPrice = totalFood + 2;
                     Console.WriteLine();
-                    Console.WriteLine("Here's your bill! Total price: $" + totalPrice + ". Sorry I ignored everyone in your party. The drinks are free until I wake up tomorrow and figure out the rest of this project.");
+                    Console.WriteLine("Here's your bill! Total price: $" + totalPrice + ".");
                 } else if (party == 0) {
                     Console.WriteLine();
                     Console.WriteLine("Don't mess with me. You're here. There is no zero. Let's try again.");
@@ -68,9 +81,8 @@ namespace Deliverable2
                     Run();
                 } else {
                     Console.WriteLine();
-                    Console.WriteLine("TOO MANY. Let's try again.");
-                    Console.WriteLine();
-                    Run();
+                    Console.WriteLine("Oh sorry, can only seat parties up to " + max + ". Have a nice day.");
+                    Environment.Exit(0);
                 }
             }
             else

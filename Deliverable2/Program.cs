@@ -21,56 +21,53 @@ namespace Deliverable2
             Console.WriteLine("How many people are in your group? Please, parties of " + max + " or lower.");
 
             string input1 = Console.ReadLine();
-            if (int.TryParse(input1, out int party)) {
-                if (party <= max && party > 0) {
+            if (int.TryParse(input1, out int party)) 
+            {
+                if (party <= max && party > 0) 
+                {
                     int patron = (party - party) + 1;
                     Console.WriteLine();
                     Console.WriteLine("A table for " + party + "!");
                     Console.WriteLine("Let's get everyone started with some drinks. We've got " + freeDrink + " or " + premiumDrink + ".");
                     Console.WriteLine();
-                    do
+                    do 
                     {
                         Console.WriteLine("Alright, person number " + patron++ + ", " + freeDrink + " or " + premiumDrink + "?");
                         string drinkChoice = Console.ReadLine().ToLower();
-                        if (drinkChoice == freeDrink)
+                        if (drinkChoice == freeDrink) 
                         {
-                            if (drinkChoice.Length == 0)
-                                Console.WriteLine("Empty String");
-                            /* figure out where to take that "empty string" business */
-                            /* do i need the else if AND else below? */
-                            /* what if they don't want drinks? - low priority */
-                            else
                                 Console.WriteLine(char.ToUpper(drinkChoice[0]) + drinkChoice.Substring(1) + ", good choice!");
                                 freeDrinkCount++;
                                 Console.WriteLine();
-                        }
-                        else if (drinkChoice == premiumDrink)
+                        } 
+                        else if (drinkChoice == premiumDrink) 
                         {
-                            if (drinkChoice.Length == 0)
-                                Console.WriteLine("Empty String");
-                            else
                                 Console.WriteLine(char.ToUpper(drinkChoice[0]) + drinkChoice.Substring(1) + ", okay!");
                                 premiumDrinkCount++;
                                 Console.WriteLine();
-                        }
-                        else
+                        } 
+                        else 
                         {
                             Console.WriteLine("We don't have that. No drink for you!");
                             Console.WriteLine();
                         }
-                    } while (party <= max && party > 0 && patron <= party);
-                    Console.WriteLine("Okay, so that's " + premiumDrinkCount + " " + premiumDrink + "s and " + freeDrinkCount + " " + freeDrink + "s.");
-                    /* make singular or plural depending on # */
+                    } 
+                    while (party <= max && party > 0 && patron <= party);
+                    Console.WriteLine("Okay, so that's " + premiumDrinkCount + " " + premiumDrink + "(s) and " + freeDrinkCount + " " + freeDrink + "(s).");
                     Console.WriteLine("I'll be right back. Feel free to grab your food!");
                     double totalPrice = ((party * buffetRate) + (premiumDrinkCount * premiumDrinkRate));
                     Console.WriteLine();
                     Console.WriteLine("Here's your bill! Total price: $" + totalPrice + ".");
-                } else if (party == 0) {
+                } 
+                else if (party == 0) 
+                {
                     Console.WriteLine();
                     Console.WriteLine("Don't mess with me. You're here. There is no zero. Let's try again.");
                     Console.WriteLine();
                     Run();
-                } else {
+                } 
+                else 
+                {
                     Console.WriteLine();
                     Console.WriteLine("Oh sorry, can only seat parties up to " + max + ". Have a nice day.");
                     Environment.Exit(0);
